@@ -3,7 +3,7 @@
 # transfer_commands
 # MacWave 2.5 的目录结构变更迁移脚本（由 install.sh / selfupdate.sh 从 configdata 拉取后执行）。
 #
-# 这里放在 updatedata/3.0.1 下是**同一份迁移的副本**：install.sh / selfupdate.sh 只按
+# 这里放在 updatedata/3.0.2 下是**同一份迁移的副本**：install.sh / selfupdate.sh 只按
 # 「正在安装的完整版本号」找 updatedata/{版本号}，所以补丁版本要各放一份，否则
 # 从 2.5 之前升级到 3.0 时这段迁移不会执行。脚本本身是幂等的、且只在旧配置版本
 # 低于 2.5 时才动作，复制过来不会有副作用。
