@@ -1,5 +1,5 @@
-version: "3.0.3"
+version: "3.0.4"
 release_date: "2026-10-12"
-build_number: "285A1435"
+build_number: "285A1614"
 branch: "3.0"
 update_command: <<< /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/MacWaveOrg/MacWave/3.0/lib/selfupdate.sh)" >>>
