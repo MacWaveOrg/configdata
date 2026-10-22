@@ -1,0 +1,20 @@
+# 便携 Python 的定义。install.sh / selfupdate.sh 读它来下载自带的解释器。
+#
+# version:          安装到 $BASE_DIR/python/<version>/，另建 current 符号链接
+# <arch>_url:       该架构的压缩包地址（必须是 https，且能通过下面的 sha256 校验）
+# <arch>_sha256:    压缩包校验值，64 位小写十六进制
+#
+# 约定：压缩包解开后，解释器应位于以下任一位置
+#   install/bin/python3  /  bin/python3  /  python/install/bin/python3
+# （python-build-standalone 的 install_only 产物是 install/bin/python3）
+#
+# 还没有上传产物时，两个 URL 留空即可 —— 安装器会打印警告并回退到系统 python3。
+# 打包脚本见 scripts/build_portable_python.sh（在 MacWave 仓库里）。
+
+version: "3.14.13"
+
+arm64_url: ""
+arm64_sha256: ""
+
+amd64_url: ""
+amd64_sha256: ""
