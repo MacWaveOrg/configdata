@@ -5,11 +5,16 @@
 # <arch>_sha256:    压缩包校验值，64 位小写十六进制
 #
 # 约定：压缩包解开后，解释器应位于以下任一位置
-#   install/bin/python3  /  bin/python3  /  python/install/bin/python3
-# （python-build-standalone 的 install_only 产物是 install/bin/python3）
+#   install/bin/python3  /  bin/python3  /  python/install/bin/python3  /  python/bin/python3
+# 装好之后安装器会再补一个 <安装目录>/bin/python3 的相对链接，把各种布局归一化，
+# 这样启动器只认的那条路径 python/current/bin/python3 一定有效。
 #
-# 还没有上传产物时，两个 URL 留空即可 —— 安装器会打印警告并回退到系统 python3。
-# 打包脚本见 scripts/build_portable_python.sh（在 MacWave 仓库里）。
+# 这两个 URL 直指上游 astral-sh/python-build-standalone 的 install_only 产物
+# （解压后是 python/install/bin/python3，正是上面列出的布局之一），不再自己 repack：
+# 少一次几十 MB 的搬运，也少一个需要维护的托管位置。sha256 由 CI 亲自下载后计算，
+# 见 .github/workflows/portable-python.yml —— 它同时会确认压缩包里真的有那个解释器路径。
+#
+# 两个 URL 留空时：安装器会打印警告并回退到系统 python3，安装不会中断。
 
 version: "3.14.13"
 
