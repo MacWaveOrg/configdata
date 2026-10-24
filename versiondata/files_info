@@ -15,6 +15,7 @@
     pkg/
         pkginstaller.py
         pkginstaller.sh
+        upgrader.py
         pkginfohelper.py
         uninstaller.py
         pkgversionparser.py
