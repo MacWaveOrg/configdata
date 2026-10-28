@@ -1,5 +1,16 @@
-version: "3.2.1"
-release_date: "2026-10-27"
-build_number: "300A1345"
-branch: "3.2"
+# 3.x 的「终点」：这里一写 4.x，所有 3.x 的 `wave selfupdate` 就会被跨大版本守卫拦住，
+# 提示用户去官网重新执行安装命令。
+#
+# 这是发版开关：**4.0.0 真正发布之后**才合并这个改动，提前合并会让 3.x 用户
+# 被告知去装一个还不存在的版本。
+#
+# update_command 仍指向已发布的 3.2 脚本 —— 它有那个守卫，且是稳定版。
+# 3.x 用户看到的是它的提示（重跑 install.sh 的 curl 命令）。
+# 若希望提示语改成「去 https://macwave.org」，把这一行指向 4.0 分支的脚本即可；
+# 本字段的注释见仓库 docs/RELEASE-3.2.1.md 的说明。
+
+version: "4.0.0"
+release_date: "2026-01-01"
+build_number: "400A0000"
+branch: "4.0"
 update_command: <<< /bin/bash -c "$(curl -fsSL --max-time 60 --retry 3 --retry-delay 2 --retry-connrefused https://raw.githubusercontent.com/MacWaveOrg/MacWave/3.2/lib/selfupdate.sh)" >>>
