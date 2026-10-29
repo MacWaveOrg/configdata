@@ -1,5 +1,5 @@
-version: "3.2.2"
-release_date: "2026-10-28"
-build_number: "301A1719"
-branch: "3.2"
-update_command: <<< /bin/bash -c "$(curl -fsSL --max-time 60 --retry 3 --retry-delay 2 --retry-connrefused https://raw.githubusercontent.com/MacWaveOrg/MacWave/3.2/lib/selfupdate.sh)" >>>
+version: "4.0.0"
+release_date: "2026-10-29"
+build_number: "302A1208"
+branch: "4.0"
+update_command: <<< /bin/bash -c "$(curl -fsSL --max-time 60 --retry 3 --retry-delay 2 --retry-connrefused https://raw.githubusercontent.com/MacWaveOrg/MacWave/4.0/lib/selfupdate.sh)" >>>
